@@ -1,10 +1,18 @@
-.titleContainer {
-  font-size: 35px;
-  text-align: center;
+.cardSubTitle {
   font-family: "Apple Chancery";
-  color: darkcyan;
+  font-size: 20px;
 }
-.page {
+.cardTitle {
+  font-family: "Apple Chancery";
+  font-size: 35px;
+}
+ion-card {
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  margin: 0 !important;
+}
+.container {
   width: 100%;
   height: 1000px;
   flex: 1;
@@ -13,32 +21,20 @@
   display: flow-root;
   padding-right: 20px;
 }
-.logInContainer {
-  width: 80%;
-  height: 45%;
-  background-color: darkcyan;
+.buttonContainer {
+  --background: #9370db;
+  height: 50px;
+  width: 100%;
+  font-size: 25px;
+  font-family: Arial;
+  font-weight: bold;
   margin: auto;
-  margin-top: 4%;
-  border-radius: 25px;
-  flex: 1;
 }
 .text {
-  padding: 10px;
-  text-align: center;
-  font-size: x-large;
+  font-size: 25px;
   font-family: "Apple Chancery";
-  color: white;
-}
-.form {
-  margin: 5%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
-
-.inputAreaBorder {
-  border-radius: 20px;
+  margin-top: 10px;
 }
 .textLabel {
-  color: darkcyan;
-  text-align: start;
+  margin-top: 10px;
 }

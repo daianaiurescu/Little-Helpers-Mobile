@@ -1,29 +1,28 @@
-<ion-content>
-  <div class="page">
+<ion-content fullscreen>
+  <div class="container">
+  
+    <ion-card >
+      <img src="../assets/volunteer.png"/>
+        <ion-card-header>
+         <ion-card-subtitle class="cardSubTitle">Welcome to</ion-card-subtitle>
+          <ion-card-title class="cardTitle">Little Helpers</ion-card-title>
+        </ion-card-header>
+    </ion-card>
 
-    <div class="titleContainer">
-      Little Helpers
-      <ion-icon name="accessibility">Little Helpers</ion-icon>
-    </div>
-
-    <div class="logInContainer">
-      <p class="text">Please enter your credentials!</p>
-      <div class="form">
-        <ion-item class="inputAreaBorder">
-          <ion-label position="floating" class="textLabel">Email</ion-label>
-          <ion-input></ion-input>
+    <div class="textLabel">
+        <ion-item>
+          <ion-label position="fixed">Email</ion-label>
+            <ion-input></ion-input>
         </ion-item>
-      </div>
-
-      <div class="form">
-      <ion-item class="inputAreaBorder">
-        <ion-label position="floating" class="textLabel">Password</ion-label>
-        <ion-input placeholder=""></ion-input>
-      </ion-item>
-      </div>
-      
+      <br>
+        <ion-item>
+          <ion-label position="fixed">Password</ion-label>
+          <ion-input type="Password"></ion-input>
+        </ion-item>
     </div>
-      <p class="text" (click)="createAnAccountPopupVisible = true" style="text-decoration-line: underline">New User? Create an account!</p>
+    <p class="text" style="text-decoration-line: underline">Forgot your password?</p>
+    <ion-button class="buttonContainer">Log in</ion-button>
+    <p class="text" style="text-decoration-line: underline">New User? Create an account!</p>
 
   </div>
 </ion-content>
