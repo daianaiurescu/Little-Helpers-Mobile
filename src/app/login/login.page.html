@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="page">
+
+    <div class="titleContainer">
+      Little Helpers
+      <ion-icon name="accessibility">Little Helpers</ion-icon>
+    </div>
+
+    <div class="logInContainer">
+      <p class="text">Please enter your credentials!</p>
+      <div class="form">
+        <ion-item class="inputAreaBorder">
+          <ion-label position="floating" class="textLabel">Email</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="form">
+      <ion-item class="inputAreaBorder">
+        <ion-label position="floating" class="textLabel">Password</ion-label>
+        <ion-input placeholder=""></ion-input>
+      </ion-item>
+      </div>
+      
+    </div>
+      <p class="text" (click)="createAnAccountPopupVisible = true" style="text-decoration-line: underline">New User? Create an account!</p>
+
+  </div>
+</ion-content>
