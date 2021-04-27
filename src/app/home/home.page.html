@@ -20,13 +20,14 @@
           <ion-input type="Password"></ion-input>
         </ion-item>
     </div>
+
     <p class="text" style="text-decoration-line: underline">Forgot your password?</p>
-    <ion-button class="buttonContainer" (click) = 'goToMainPage()'>Log in</ion-button>
-    <p class="text" style="text-decoration-line: underline" (click)="newUserClicked = true">New User? Create an account!</p>
+
+    <ion-button class="buttonContainer" routerLink="/welcome">Log in</ion-button>
+
+    <p class="text" (click)="OpenModal()" style="text-decoration-line: underline">New User? Create an account!</p>
 
   </div>
 
 </ion-content>
-
-<router-outlet></router-outlet>
    
