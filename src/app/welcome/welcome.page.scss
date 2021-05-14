@@ -5,34 +5,28 @@
   font-family: "Apple Chancery";
   font-size: 28px;
   color: white;
+  justify-content: center;
 }
-.styled-button1 {
+.styled-button {
   background-color: darkcyan;
   border: none;
   color: white;
   padding: 20px;
   font-size: x-large;
   cursor: pointer;
-  margin-left: 245px;
-}
-.styled-button2 {
-  background-color: darkcyan;
-  border: none;
-  color: white;
-  padding: 20px;
-  font-size: x-large;
-  cursor: pointer;
+  margin-left: 75%;
 }
 .title {
   text-align: center;
   font-family: Cursive;
   font-size: 40px;
+  top: 90px;
 }
 .text {
   text-align: center;
   font-family: Cursive;
   font-size: 20px;
-  margin-top: 90px;
+  margin-top: 50px;
 }
 .wave {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
