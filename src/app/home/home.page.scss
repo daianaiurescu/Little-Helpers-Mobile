@@ -1,0 +1,41 @@
+.cardSubTitle {
+  font-family: "Apple Chancery";
+  font-size: 20px;
+}
+.cardTitle {
+  font-family: "Apple Chancery";
+  font-size: 35px;
+}
+ion-card {
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  margin: 0 !important;
+}
+.container {
+  width: 100%;
+  height: 1000px;
+  flex: 1;
+  background: azure;
+  padding: 20px;
+  display: flow-root;
+  padding-right: 20px;
+}
+.buttonContainer {
+  --background: #9370db;
+  height: 50px;
+  width: 100%;
+  font-size: 25px;
+  font-family: Arial;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 10px;
+}
+.text {
+  font-size: 25px;
+  font-family: "Apple Chancery";
+  margin-top: 10px;
+}
+.textLabel {
+  margin-top: 10px;
+}

@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <ion-menu side="start" content-id="main-content">
+            <ion-header>
+            <ion-toolbar translucent>
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+            </ion-header>
+            <ion-content>
+            <ion-list>
+                <ion-item>
+                <ion-icon name="home" slot="start"></ion-icon>
+                <ion-label routerLink="/welcome">Home</ion-label>
+                </ion-item>
+                <ion-item>
+                <ion-icon name="bag" slot="start"></ion-icon>
+                <ion-label>Shop</ion-label>
+                </ion-item>
+                <ion-item>
+                <ion-icon name="accessibility" slot="start"></ion-icon>
+                <ion-label routerLink="/organizations">Organisations</ion-label>
+                </ion-item>
+            </ion-list>
+            </ion-content>
+        </ion-menu>
+
+    <ion-content>
+        <ion-header id="main-content"> 
+                <ion-toolbar position="top" class="new-background-color">
+                    <ion-buttons slot="start">
+                        <ion-menu-button style="color:white"></ion-menu-button>
+                    </ion-buttons>
+                    <ion-title class="headerTitle">Little Helpers</ion-title>
+                    <div>
+                        <button class="styled-button"><i class="fa fa-shopping-cart"></i></button>
+                        <button class="styled-button"><i class="fa fa-user"></i></button>
+                    </div>
+                </ion-toolbar>
+
+            <ion-toolbar>
+                <div class="page">
+                    <div class="organisations-container">
+                        <div *ngFor="let organisation of organisations" class="organisation-container">
+                        <p class="title"> {{ organisation.title}} </p>
+                        <img [src]=organisation.photo [width]="200">
+                        <ion-button class= "buttonContainer" (click)="getSelectedOrganisation(organisation);OpenModal()">View Details</ion-button>
+                        </div>
+                    </div>
+                </div>
+            </ion-toolbar>
+        </ion-header>
+    </ion-content>

@@ -1,0 +1,18 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="headerContainer"> {{ selectedOrganisation.title }} </ion-title>
+      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+    </ion-toolbar>
+  </ion-header>
+        <img [src]=selectedOrganisation.photo [height]="300">
+        <div class="dx-popup-content-text">
+          <p>Area of interest: {{ selectedOrganisation.field}}</p>
+          <p>Year of founding: {{selectedOrganisation.year}}</p>
+          <p>Description: {{selectedOrganisation.description}}</p>
+      </div>
+
+  <ion-button class="buttonApply">Apply for volunteering</ion-button>
+
+</ion-content>

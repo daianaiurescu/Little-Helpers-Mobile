@@ -1,0 +1,38 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="headerContainer">Create an account</ion-title>
+      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="textLabel">
+    <ion-item>
+      <ion-label position="fixed">First Name</ion-label>
+        <ion-input #firstName></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Last Name</ion-label>
+        <ion-input #lastName></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Email</ion-label>
+        <ion-input #email></ion-input>
+    </ion-item>
+  <br>
+    <ion-item>
+      <ion-label position="fixed">Password</ion-label>
+      <ion-input type="Password" #password></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">"user"/"organisation"</ion-label>
+      <ion-input #role></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button class="buttonContainerS" (click) = "SignUp(firstName,lastName,email,password,role)">Sign Up</ion-button>
+
+
+</ion-content>

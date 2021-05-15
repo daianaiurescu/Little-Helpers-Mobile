@@ -1,0 +1,58 @@
+.new-background-color {
+  --background: darkcyan;
+}
+.headerTitle {
+  font-family: "Apple Chancery";
+  font-size: 28px;
+  color: white;
+  justify-content: center;
+}
+.styled-button {
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 75%;
+}
+.title {
+  text-align: center;
+  font-family: Cursive;
+  font-size: 40px;
+}
+.text {
+  text-align: center;
+  font-family: Cursive;
+  font-size: 20px;
+  margin-top: 90px;
+}
+.page {
+  flex: 1;
+  background: azure;
+  display: flow-root;
+  padding-right: 20px;
+}
+.organisations-container {
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.organisation-container {
+  padding: 28px;
+  margin: 20px;
+  margin-right: auto;
+}
+.title {
+  color: darkcyan;
+  font-size: large;
+  font-family: Courier;
+}
+.buttonContainer {
+  width: 80%;
+  margin-top: 20px;
+  --background: darkcyan;
+  font-family: "Apple Chancery";
+  font-size: large;
+}

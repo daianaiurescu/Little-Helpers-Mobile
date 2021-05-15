@@ -1,0 +1,104 @@
+.new-background-color {
+  --background: darkcyan;
+}
+.headerTitle {
+  font-family: "Apple Chancery";
+  font-size: 28px;
+  color: white;
+  justify-content: center;
+}
+.styled-button {
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 75%;
+}
+.title {
+  text-align: center;
+  font-family: Cursive;
+  font-size: 40px;
+  top: 90px;
+}
+.text {
+  text-align: center;
+  font-family: Cursive;
+  font-size: 20px;
+  margin-top: 50px;
+}
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.overlay {
+  position: absolute;
+  top: 70px;
+  left: 33px;
+  width: 350px;
+  height: 220px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: darkcyan;
+}
+.column {
+  position: relative;
+  float: left;
+  top: -70px;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.text_image {
+  font-family: Cursive;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.imageContainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
