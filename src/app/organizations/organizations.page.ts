@@ -15,18 +15,17 @@ import {Router} from '@angular/router';
 })
 
 export class OrganizationsPage implements OnInit {
-  static getOrganization(): Organisation {
-    throw new Error('Method not implemented.');
-  }
 
-  organisationPopupVisible: boolean;
-  voluteeringPopupVisible: boolean;
   now: Date = new Date();
   organisations: Organisation[];
   getAllOrganisationsSubscription: Subscription;
   selectedOrganisation: Organisation;
 
-  constructor(private organisationsService: OrganisationsService, private modalController: ModalController, private modalPopupOrgPage: ModalpopuporgPage, private userService: UserService, private router: Router) {
+  constructor(private organisationsService: OrganisationsService,
+              private modalController: ModalController,
+              private modalPopupOrgPage: ModalpopuporgPage,
+              private userService: UserService,
+              private router: Router) {
   }
 
    ngOnInit(): void {
@@ -47,6 +46,7 @@ export class OrganizationsPage implements OnInit {
        phone: phone.value,
        email: email.value,
        description: desc.value,
+       // eslint-disable-next-line @typescript-eslint/naming-convention
        applied_at: this.selectedOrganisation.title
      };
      this.organisationsService.addVolunteer(data)
@@ -59,6 +59,7 @@ export class OrganizationsPage implements OnInit {
          });
    }
 
+  // eslint-disable-next-line @typescript-eslint/naming-convention
    async OpenModal(){
     const modal = await  this.modalController.create({
       component: ModalpopuporgPage,
@@ -66,6 +67,7 @@ export class OrganizationsPage implements OnInit {
     });
     return await modal.present();
   }
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   OpenPage(){
 
       if (this.userService.user.getValue().role === 'user') {

@@ -17,11 +17,10 @@ export class ModalpopuporgPage implements OnInit {
   selectedOrganisation: Organisation;
   constructor(private modalController: ModalController) { }
 
-  ngOnInit() {
-    console.log(this.selectedOrganisation);
+  // eslint-disable-next-line @angular-eslint/contextual-lifecycle
+  ngOnInit() {}
 
-  }
-
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   CloseModal() {
     this.modalController.dismiss();
   }

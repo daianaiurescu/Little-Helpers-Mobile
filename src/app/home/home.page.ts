@@ -5,7 +5,7 @@ import {User} from '../Models/User.interface';
 import {Subscription} from 'rxjs';
 import {UserService} from '../services/userService';
 import {Router} from '@angular/router';
-import {ForgotpasswordPage} from "../ForgotPasswordPopup/forgotpassword.page";
+import {ForgotpasswordPage} from '../ForgotPasswordPopup/forgotpassword.page';
 
 @Component({
   selector: 'app-home',
