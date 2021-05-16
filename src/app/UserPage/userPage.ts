@@ -4,11 +4,10 @@ import {Organisation} from '../Models/Organisation.interface';
 import {Subscription} from 'rxjs';
 import {UserService} from '../services/userService';
 import {ActivatedRoute} from '@angular/router';
-import {ModalpopuporgPage} from "../modalpopuporg/modalpopuporg.page";
-import {ModalController} from "@ionic/angular";
-import {UserInformationPopupPage} from "../UserInformationPopup/userInformationPopup.page";
-import {UserEditInfoPopupPage} from "../UserEditInfoPopup/userEditInfoPopup.page";
-import {UserShowOrgPopupPage} from "../UserShowOrgPopup/userShowOrgPopup.page";
+import {ModalController} from '@ionic/angular';
+import {UserInformationPopupPage} from '../UserInformationPopup/userInformationPopup.page';
+import {UserEditInfoPopupPage} from '../UserEditInfoPopup/userEditInfoPopup.page';
+import {UserShowOrgPopupPage} from '../UserShowOrgPopup/userShowOrgPopup.page';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector

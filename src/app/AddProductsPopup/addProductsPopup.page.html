@@ -30,11 +30,11 @@
       <ion-input #description></ion-input>
     </ion-item>
     <input type="file" accept="*.png.jpg" (change)="upload($event)">
-    <ion-button (click)="createRecord()">upload</ion-button>
+    <ion-button class="buttonContainerS mr-10" (click)="createRecord()">upload</ion-button>
     <br>
   </div>
 
-  <ion-button  slot="primary" class="buttonContainer mr-10" (click) = "saveProduct(title, category, price, stock, description)" >Save changes</ion-button>
+  <ion-button class="buttonContainerS mr-10" (click) = "saveProduct(title, category, price, stock, description)" >Save changes</ion-button>
 
 
 </ion-content>

@@ -1,7 +1,6 @@
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Organisation } from '../Models/Organisation.interface';
-import { OrganizationsPage } from '../organizations/organizations.page';
 
 @Component({
   selector: 'app-modalpopuporg',
@@ -17,11 +16,10 @@ export class ModalpopuporgPage implements OnInit {
   selectedOrganisation: Organisation;
   constructor(private modalController: ModalController) { }
 
-  ngOnInit() {
-    console.log(this.selectedOrganisation);
-  
-  }
+  // eslint-disable-next-line @angular-eslint/contextual-lifecycle
+  ngOnInit() {}
 
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   CloseModal() {
     this.modalController.dismiss();
   }
