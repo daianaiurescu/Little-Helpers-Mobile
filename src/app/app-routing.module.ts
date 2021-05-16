@@ -3,6 +3,9 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home/home.page';
 import { OrganizationsPage } from './organizations/organizations.page';
 import { WelcomePage } from './welcome/welcome.page';
+import {User} from './Models/User.interface';
+import {UserPage} from './UserPage/userPage';
+import {LoggedOrgPage} from './LoggedOrganisationsPage/loggedOrg.page';
 
 const routes: Routes = [
   {
@@ -26,7 +29,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
- 
+  {
+    path: 'userpage/:id',
+    component: UserPage
+  },
+  {
+    path: 'loggedOrganisation/:id',
+    component: LoggedOrgPage
+  }
 ];
 
 @NgModule({

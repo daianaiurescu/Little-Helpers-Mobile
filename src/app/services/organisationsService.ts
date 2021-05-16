@@ -17,7 +17,21 @@ export class OrganisationsService{
     return this.httpClient.get<Array<Organisation>>(this.apiUrl + 'Organisations');
   }
 
+  // tslint:disable-next-line:typedef
+  editDescription(data: any){
+    console.log(data);
+    return this.httpClient.post(this.apiUrl + 'ChangeOrganisationDetails', data);
+  }
+
   addVolunteer(data: any): Observable<any> {
     return this.httpClient.post(this.apiUrl + 'SaveVolunteer', data);
+  }
+
+  getOrganisationsForUser(data: any): Observable<any> {
+    return this.httpClient.get<Array<Organisation>>(this.apiUrl + 'UserOrganisations/' + data);
+  }
+  // tslint:disable-next-line:typedef
+  getLoggedInOrganisation(title){
+    return this.httpClient.get(this.apiUrl + 'Organisations/' + title);
   }
 }

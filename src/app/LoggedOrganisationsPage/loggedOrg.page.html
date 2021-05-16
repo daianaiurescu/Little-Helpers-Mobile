@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label routerLink="/welcome">Home</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag" slot="start"></ion-icon>
+        <ion-label>Shop</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="accessibility" slot="start"></ion-icon>
+        <ion-label routerLink="/organizations">Organisations</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content>
+  <ion-header id="main-content">
+    <ion-toolbar position="top" class="new-background-color">
+      <ion-buttons slot="start">
+        <ion-menu-button style="color:white"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="headerTitle">Little Helpers</ion-title>
+      <div>
+        <button class="styled-button"><i class="fa fa-shopping-cart"></i></button>
+      </div>
+    </ion-toolbar>
+    <ion-toolbar>
+    <h2 class="title">Welcome, {{this.organisation.lastName}} {{this.organisation.firstName}}</h2>
+    <h1 class="subtitle"> {{loggedOrganisation?.description}}</h1>
+    <h3 class="title">Here's what you can do!</h3>
+    <div class="buttons-section">
+      <ion-button
+        class="button-info"
+        text="View what your clients can see about you!"
+        (click)="showInfo()">
+      </ion-button>
+      <ion-button
+        class="button-info"
+        text="Edit your description"
+        (click)="editInfo()">
+      </ion-button>
+      <ion-button
+        class="button-info"
+        text="View your products"
+        (click)="viewProducts()">
+      </ion-button>
+      <ion-button
+        class="button-info"
+        text="Add new products"
+        (click)="addProducts()">
+      </ion-button>
+      <ion-button
+        class="button-info"
+        text="See your volunteering list"
+        (click)="viewVolunteers()">
+      </ion-button>
+      <ion-button
+        class="button-info"
+        text="Logout"
+        (click)="logout()">
+      </ion-button>
+    </div>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>

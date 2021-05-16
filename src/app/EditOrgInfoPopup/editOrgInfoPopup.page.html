@@ -1,0 +1,22 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="headerContainer">Edit Details</ion-title>
+      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="textLabel">
+    <ion-item>
+      <ion-label position="fixed">Description</ion-label>
+      <ion-input  #description></ion-input>
+    </ion-item>
+    <br>
+  </div>
+
+  <ion-button class="buttonContainerS" (click) = "save(description)" >Save changes</ion-button>
+
+
+</ion-content>

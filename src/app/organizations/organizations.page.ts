@@ -4,6 +4,8 @@ import {OrganisationsService} from '../services/organisationsService';
 import {Subscription} from 'rxjs';
 import { ModalController } from '@ionic/angular';
 import { ModalpopuporgPage } from '../modalpopuporg/modalpopuporg.page';
+import {UserService} from '../services/userService';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-organizations',
@@ -23,7 +25,7 @@ export class OrganizationsPage implements OnInit {
   getAllOrganisationsSubscription: Subscription;
   selectedOrganisation: Organisation;
 
-  constructor(private organisationsService: OrganisationsService, private modalController: ModalController, private modalPopupOrgPage: ModalpopuporgPage) {
+  constructor(private organisationsService: OrganisationsService, private modalController: ModalController, private modalPopupOrgPage: ModalpopuporgPage, private userService: UserService, private router: Router) {
   }
 
    ngOnInit(): void {
@@ -63,5 +65,14 @@ export class OrganizationsPage implements OnInit {
     });
     return await modal.present();
   }
- 
+  OpenPage(){
+
+      if (this.userService.user.getValue().role === 'user') {
+        this.router.navigate(['/userpage', this.userService.user.getValue().id]);
+      }
+      else{
+        this.router.navigate(['loggedOrganisation', this.userService.user.getValue().id]);
+      }
+  }
+
 }

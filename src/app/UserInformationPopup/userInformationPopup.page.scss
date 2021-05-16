@@ -1,0 +1,41 @@
+.headerContainer {
+  font-size: x-large;
+  font-family: "Apple Chancery";
+}
+.textLabel {
+  margin-top: 10px;
+  margin-top: 30px;
+}
+.buttonContainer {
+  --background: darkcyan;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 14px;
+}
+.buttonContainerS {
+  --background: darkcyan;
+  height: 80px;
+  width: 100%;
+  font-size: x-large;
+  font-family: Arial;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+.dx-popup-content {
+  display: flex;
+}
+.dx-popup-content-text {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: large;
+  font-family: Courier;
+  height: fit-content;
+}
+.buttonApply {
+  font-family: "Apple Chancery";
+  --background: darkcyan;
+  // justify-self: center;
+  font-size: x-large;
+}

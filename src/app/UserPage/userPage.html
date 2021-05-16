@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label routerLink="/welcome">Home</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag" slot="start"></ion-icon>
+        <ion-label>Shop</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="accessibility" slot="start"></ion-icon>
+        <ion-label routerLink="/organizations">Organisations</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content>
+  <ion-header id="main-content">
+    <ion-toolbar position="top" class="new-background-color">
+      <ion-buttons slot="start">
+        <ion-menu-button style="color:white"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="headerTitle">Little Helpers</ion-title>
+      <div>
+        <button class="styled-button"><i class="fa fa-shopping-cart"></i></button>
+      </div>
+    </ion-toolbar>
+
+    <ion-toolbar>
+      <div class="page" *ngIf="user">
+        <h1 class="title">Welcome, {{user.firstName}} {{user.lastName}}</h1>
+        <h3 class="subtitle">Here's what you can do!</h3>
+        <div class="buttons-section">
+          <ion-button
+            class="button-info"
+            text="Details"
+            (click)="showInfo()">
+          </ion-button>
+          <ion-button
+            class="button-info"
+            text="Edit"
+            (click)="editInfo()">
+          </ion-button>
+          <ion-button
+            class="button-info"
+            text="Organisations"
+            (click)="viewOrg()">
+          </ion-button>
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>

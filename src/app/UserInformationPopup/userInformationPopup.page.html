@@ -1,0 +1,14 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <div class="dx-popup-content-text">
+    <p>Full Name: {{ user.firstName}} {{user.lastName}}</p>
+    <p>E-mail: {{user.emailAddress}}</p>
+    <p>Role: {{user.role}}</p>
+  </div>
+
+</ion-content>
