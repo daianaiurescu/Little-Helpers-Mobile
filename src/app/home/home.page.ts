@@ -32,11 +32,6 @@ export class HomePage implements OnInit{
     this.getAllUsersSubscription = this.userService.getUsers().subscribe( response => {
       this.users = response;
     });
-
-  ngOnInit(){
-    console.log("a");
-  }
-
   }
   // eslint-disable-next-line @typescript-eslint/naming-convention
   SingIn(email, password): void {
