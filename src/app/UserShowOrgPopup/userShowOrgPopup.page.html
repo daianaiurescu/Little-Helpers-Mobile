@@ -1,17 +1,16 @@
 <ion-content>
-  <ion-header>
-    <ion-toolbar>
-      <div *ngFor="let organisation of organisations" class="organisation-container">
-      <ion-title class="headerContainer"> {{ organisation.title }} </ion-title>
-      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
-      </div>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header>
+      <ion-toolbar>
+        <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+      </ion-toolbar>
+    </ion-header>
   <div *ngFor="let organisation of organisations" class="organisation-container">
-  <img [src]=organisation.photo [height]="300">
-  <div class="dx-popup-content-text">
-    <p>Description: {{organisation.description}}</p>
-  </div>
+    <img [src]=organisation.photo [height]="300">
+    <div class="dx-popup-content-text">
+      <p> Title: {{organisation.title}} </p>
+      <p>Description: {{organisation.description}}</p>
+      <ion-button (click)="unsubscribe(organisation)" slot="primary" class="buttonContainer">Unsubscribe from {{organisation.title}}</ion-button>
+    </div>
   </div>
 
 </ion-content>

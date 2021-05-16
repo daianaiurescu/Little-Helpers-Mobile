@@ -10,7 +10,7 @@
     <ion-list>
       <ion-item>
         <ion-icon name="home" slot="start"></ion-icon>
-        <ion-label routerLink="/welcome">Home</ion-label>
+        <ion-label [routerLink]="['/welcome']">Home</ion-label>
       </ion-item>
       <ion-item>
         <ion-icon name="bag" slot="start"></ion-icon>
@@ -18,7 +18,7 @@
       </ion-item>
       <ion-item>
         <ion-icon name="accessibility" slot="start"></ion-icon>
-        <ion-label routerLink="/organizations">Organisations</ion-label>
+        <ion-label [routerLink]="['/organizations']">Organisations</ion-label>
       </ion-item>
     </ion-list>
   </ion-content>
@@ -37,25 +37,13 @@
     </ion-toolbar>
 
     <ion-toolbar>
-      <div class="page" *ngIf="user">
+      <div class="page" *ngIf="user" style="height: 700px">
         <h1 class="title">Welcome, {{user.firstName}} {{user.lastName}}</h1>
         <h3 class="subtitle">Here's what you can do!</h3>
         <div class="buttons-section">
-          <ion-button
-            class="button-info"
-            text="Details"
-            (click)="showInfo()">
-          </ion-button>
-          <ion-button
-            class="button-info"
-            text="Edit"
-            (click)="editInfo()">
-          </ion-button>
-          <ion-button
-            class="button-info"
-            text="Organisations"
-            (click)="viewOrg()">
-          </ion-button>
+          <ion-button (click)="showInfo()" slot="primary" class="buttonContainer mr-10">Details</ion-button>
+          <ion-button (click)="editInfo()" slot="primary" class="buttonContainer mr-10">Edit your details</ion-button>
+          <ion-button (click)="viewOrg()" slot="primary" class="buttonContainer mr-10">View your volunteering list</ion-button>
         </div>
       </div>
     </ion-toolbar>

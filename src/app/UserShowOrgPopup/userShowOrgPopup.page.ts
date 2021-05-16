@@ -22,6 +22,21 @@ export class UserShowOrgPopupPage implements OnInit{
       this.organisations = response;
     });
   }
+  viewOrg(): void {
+    this.getAllOrganisationsSubscription = this.organisationsService.getOrganisationsForUser(this.user.emailAddress).subscribe(response => {
+      this.organisations = response;
+    });
+  }
+
+  unsubscribe(organisation){
+    this.organisationsService.deleteOrganisationForUser(this.user.emailAddress,organisation.title).subscribe(response => {
+        console.log(response);
+        this.viewOrg();
+      },
+      error => {
+        console.log(error);
+      });
+  }
 
   // eslint-disable-next-line @typescript-eslint/naming-convention
   CloseModal() {

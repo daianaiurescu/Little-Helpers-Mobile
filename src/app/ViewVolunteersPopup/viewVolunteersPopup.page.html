@@ -1,0 +1,18 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="headerContainer"> {{ organisation.title }} </ion-title>
+      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <div class="dx-popup-content-text" *ngFor="let volunteer of volunteers">
+    <p>Full name: {{volunteer.firstName}} {{volunteer.lastName}}</p>
+    <p>Birthday: {{volunteer.birthday}}</p>
+    <p>Phone number: {{volunteer.phone}}</p>
+    <p>Email address: {{volunteer.email}}</p>
+    <p>Description: {{volunteer.description}}</p>
+    <ion-button (click)="DeleteVolunteer(volunteer)" slot="primary" class="buttonContainer">Delete {{volunteer.lastName}} from your list</ion-button>
+  </div>
+
+</ion-content>

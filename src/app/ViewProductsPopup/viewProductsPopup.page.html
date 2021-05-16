@@ -1,0 +1,17 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="headerContainer"> {{ organisation.title }} </ion-title>
+      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <div class="dx-popup-content-text" *ngFor="let product of products">
+    <p>Title: {{product.title}}</p>
+    <p>Description: {{product.description}}</p>
+    <p>Category: {{product.category}}</p>
+    <p>Price: {{product.price}}</p>
+    <ion-button (click)="DeleteProduct(product)" slot="primary" class="buttonContainer">Delete {{product.title}} from your list</ion-button>
+  </div>
+
+</ion-content>

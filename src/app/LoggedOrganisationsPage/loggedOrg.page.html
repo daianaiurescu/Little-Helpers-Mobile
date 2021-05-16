@@ -10,7 +10,7 @@
     <ion-list>
       <ion-item>
         <ion-icon name="home" slot="start"></ion-icon>
-        <ion-label routerLink="/welcome">Home</ion-label>
+        <ion-label [routerLink]="['/welcome']">Home</ion-label>
       </ion-item>
       <ion-item>
         <ion-icon name="bag" slot="start"></ion-icon>
@@ -18,7 +18,7 @@
       </ion-item>
       <ion-item>
         <ion-icon name="accessibility" slot="start"></ion-icon>
-        <ion-label routerLink="/organizations">Organisations</ion-label>
+        <ion-label [routerLink]="['/organizations']">Organisations</ion-label>
       </ion-item>
     </ion-list>
   </ion-content>
@@ -36,41 +36,18 @@
       </div>
     </ion-toolbar>
     <ion-toolbar>
-    <h2 class="title">Welcome, {{this.organisation.lastName}} {{this.organisation.firstName}}</h2>
-    <h1 class="subtitle"> {{loggedOrganisation?.description}}</h1>
-    <h3 class="title">Here's what you can do!</h3>
-    <div class="buttons-section">
-      <ion-button
-        class="button-info"
-        text="View what your clients can see about you!"
-        (click)="showInfo()">
-      </ion-button>
-      <ion-button
-        class="button-info"
-        text="Edit your description"
-        (click)="editInfo()">
-      </ion-button>
-      <ion-button
-        class="button-info"
-        text="View your products"
-        (click)="viewProducts()">
-      </ion-button>
-      <ion-button
-        class="button-info"
-        text="Add new products"
-        (click)="addProducts()">
-      </ion-button>
-      <ion-button
-        class="button-info"
-        text="See your volunteering list"
-        (click)="viewVolunteers()">
-      </ion-button>
-      <ion-button
-        class="button-info"
-        text="Logout"
-        (click)="logout()">
-      </ion-button>
-    </div>
+      <div class="page" *ngIf="organisation" style="height: 700px">
+        <h2 class="title">Welcome, {{this.organisation.lastName}} {{this.organisation.firstName}}</h2>
+        <h1 class="subtitle"> {{loggedOrganisation?.description}}</h1>
+        <h3 class="title">Here's what you can do!</h3>
+        <div class="buttons-section">
+          <ion-button slot="primary" class="buttonContainer mr-10" (click)="showInfo()">View what your clients can see about you!</ion-button>
+          <ion-button slot="primary" class="buttonContainer mr-10" (click)="editInfo()"> Edit your description</ion-button>
+          <ion-button slot="primary" class="buttonContainer mr-10" (click)="viewProducts()">View your products</ion-button>
+          <ion-button slot="primary" class="buttonContainer mr-10" (click)="addProducts()"> Add new Products</ion-button>
+          <ion-button slot="primary" class="buttonContainer mr-10" (click)="viewVolunteers()">See your volunteering list</ion-button>
+        </div>
+      </div>
     </ion-toolbar>
   </ion-header>
 </ion-content>
