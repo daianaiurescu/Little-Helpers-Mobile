@@ -4,6 +4,7 @@ import {OrganisationsService} from '../services/organisationsService';
 import {Subscription} from 'rxjs';
 import { ModalController } from '@ionic/angular';
 import { ModalpopuporgPage } from '../modalpopuporg/modalpopuporg.page';
+import { ModalpopupvolPage } from '../modalpopupvol/modalpopupvol.page';
 import {UserService} from '../services/userService';
 import {Router} from '@angular/router';
 

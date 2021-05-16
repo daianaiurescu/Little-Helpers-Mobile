@@ -17,10 +17,6 @@ const routes: Routes = [
     component: WelcomePage
   },
   {
-    path: 'modalpopup',
-    component: HomePage
-  },
-  {
     path: 'organizations',
     component: OrganizationsPage
   },
