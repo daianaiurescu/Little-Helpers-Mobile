@@ -34,8 +34,13 @@
   height: fit-content;
 }
 .buttonApply {
-  font-family: "Apple Chancery";
   --background: darkcyan;
-  // justify-self: center;
+  height: 90px;
+  width: 100%;
   font-size: x-large;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  font-family: "Apple Chancery";
 }

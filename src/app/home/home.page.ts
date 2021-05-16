@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {ModalController} from '@ionic/angular';
 import { ModalpopupPage } from '../modalpopup/modalpopup.page';
 import {User} from '../Models/User.interface';
@@ -32,6 +32,10 @@ export class HomePage implements OnInit{
     this.getAllUsersSubscription = this.userService.getUsers().subscribe( response => {
       this.users = response;
     });
+
+  ngOnInit(){
+    console.log("a");
+  }
 
   }
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -69,3 +73,4 @@ export class HomePage implements OnInit{
     });
   }
 }
+
