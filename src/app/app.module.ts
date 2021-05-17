@@ -11,7 +11,7 @@ import { HomePage } from './home/home.page';
 import { WelcomePage } from './welcome/welcome.page';
 import { ModalpopupPage } from './modalpopup/modalpopup.page';
 import { OrganizationsPage } from './organizations/organizations.page';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { ModalpopuporgPage } from './modalpopuporg/modalpopuporg.page';
 import { ModalpopupvolPage } from './modalpopupvol/modalpopupvol.page';
 import {UserPage} from './UserPage/userPage';
@@ -26,6 +26,7 @@ import {UserShowOrgPopupPage} from './UserShowOrgPopup/userShowOrgPopup.page';
 import {ViewProductsPopupPage} from './ViewProductsPopup/viewProductsPopup.page';
 import {ViewVolunteersPopupPage} from './ViewVolunteersPopup/viewVolunteersPopup.page';
 import {UserInformationPopupPage} from './UserInformationPopup/userInformationPopup.page';
+import {AuthInterceptorService} from "./services/authInterceptorService";
 
 
 @NgModule({
@@ -52,7 +53,11 @@ import {UserInformationPopupPage} from './UserInformationPopup/userInformationPo
   entryComponents: [],
   // eslint-disable-next-line max-len
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,CommonModule,IonicModule,FormsModule,RouterModule,HttpClientModule, AngularFireModule.initializeApp(environment.firebase)],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{
+    //provide: RouteReuseStrategy, useClass: IonicRouteStrategy
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true }],
   bootstrap: [AppComponent],
   exports: [RouterModule],
 

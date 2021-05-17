@@ -58,4 +58,7 @@ export class UserPage implements  OnInit{
     });
     return await modal.present();
   }
+  onLogout():void {
+    this.userService.logout();
+  }
 }

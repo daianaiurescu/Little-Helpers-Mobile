@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import {Router} from '@angular/router';
 import {UserService} from '../services/userService';
@@ -9,8 +9,11 @@ import {UserService} from '../services/userService';
   styleUrls: ['./welcome.page.scss'],
 })
 
-export class WelcomePage {
+export class WelcomePage implements OnInit{
 
+  ngOnInit(): void {
+    console.log('Aici');
+  }
   constructor(private router: Router, private userService: UserService) { }
   // eslint-disable-next-line @typescript-eslint/naming-convention
   OpenPage(){

@@ -70,7 +70,7 @@ export class UserService {
     this.httpClient.delete(this.apiUrl + 'user/logout').pipe(tap(() =>
       {
         this.user.next(null);
-        this.router.navigate(['/login']);
+        this.router.navigate(['/home']);
         localStorage.removeItem('userData');
         if (this.tokenExpirationTimer) {
           clearTimeout(this.tokenExpirationTimer);
