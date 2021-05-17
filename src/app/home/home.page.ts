@@ -33,10 +33,6 @@ export class HomePage implements OnInit{
       this.users = response;
     });
 
-  ngOnInit(){
-    console.log("a");
-  }
-
   }
   // eslint-disable-next-line @typescript-eslint/naming-convention
   SingIn(email, password): void {

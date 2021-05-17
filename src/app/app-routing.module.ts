@@ -6,6 +6,8 @@ import { WelcomePage } from './welcome/welcome.page';
 import {User} from './Models/User.interface';
 import {UserPage} from './UserPage/userPage';
 import {LoggedOrgPage} from './LoggedOrganisationsPage/loggedOrg.page';
+import { ShopPage } from './shop/shop.page';
+import { CartPage } from './shop/cart.page';
 
 const routes: Routes = [
   {
@@ -32,7 +34,15 @@ const routes: Routes = [
   {
     path: 'loggedOrganisation/:id',
     component: LoggedOrgPage
-  }
+  },
+  {
+    path: 'shop',
+    component: ShopPage
+  },
+  {
+    path: 'cart',
+    component: CartPage
+  },
 ];
 
 @NgModule({

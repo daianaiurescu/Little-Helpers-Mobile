@@ -16,10 +16,11 @@ import { ModalpopuporgPage } from './modalpopuporg/modalpopuporg.page';
 import { ModalpopupvolPage } from './modalpopupvol/modalpopupvol.page';
 import {UserPage} from './UserPage/userPage';
 import {environment} from '../environments/environment';
-
+import { ShopPage } from './shop/shop.page';
+import { CartPage } from './shop/cart.page';
 
 @NgModule({
-  declarations: [AppComponent,HomePage,WelcomePage,ModalpopupPage,OrganizationsPage,ModalpopuporgPage,ModalpopupvolPage,UserPage],
+  declarations: [AppComponent,HomePage,WelcomePage,ModalpopupPage,OrganizationsPage,ModalpopuporgPage,ModalpopupvolPage,UserPage,ShopPage,CartPage],
   entryComponents: [],
   // eslint-disable-next-line max-len
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,CommonModule,IonicModule,FormsModule,RouterModule,HttpClientModule, AngularFireModule.initializeApp(environment.firebase)],
