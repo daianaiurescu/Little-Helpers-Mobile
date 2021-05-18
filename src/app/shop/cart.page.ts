@@ -1,6 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from '../Models/Product.interface';
 import {CartService} from '../services/cartService';
+import {UserService} from '../services/userService';
+import {Router} from '@angular/router';
+import {UserEditInfoPopupPage} from '../UserEditInfoPopup/userEditInfoPopup.page';
+import {ModalController} from '@ionic/angular';
+import {ClientDetailsPopupPage} from '../clientDetailsPopup/clientDetailsPopup.page';
 
 @Component({
   selector: 'app-cart',
@@ -12,7 +17,7 @@ export class CartPage implements OnInit{
   cartDetails: Product[];
   total: number;
   cartNumber = 0;
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService, private userService: UserService, private router: Router, private modalController: ModalController) {
   }
   ngOnInit(): void {
     if (localStorage.getItem('localCart')) {
@@ -77,6 +82,26 @@ export class CartPage implements OnInit{
     this.total = 0;
     this.cartNumber = 0;
     this.cartService.cartSubject.next(this.cartNumber);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  OpenPage(){
+
+    if (this.userService.user.getValue().role === 'user') {
+      this.router.navigate(['/userpage', this.userService.user.getValue().id]);
+    }
+    else{
+      this.router.navigate(['loggedOrganisation', this.userService.user.getValue().id]);
+    }
+  }
+  async openClientDetails(){
+    const modal = await  this.modalController.create({
+      component: ClientDetailsPopupPage,
+      componentProps: { total: this.total,
+                        cartDetails: this.cartDetails,
+                        cartNumber: this.cartNumber}
+    });
+    return await modal.present();
   }
 
 }

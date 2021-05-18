@@ -31,8 +31,7 @@
                         <ion-menu-button style="color:white"></ion-menu-button>
                     </ion-buttons>
                     <ion-title class="headerTitle">Little Helpers</ion-title>
-                    <div>  
-                        <button class="styled-button"><i (click)="goToCart()" class="fa fa-shopping-cart"></i></button>
+                    <div>
                         <button class="styled-button" (click)="OpenPage()" ><i class="fa fa-user"></i></button>
                     </div>
                 </ion-toolbar>
@@ -71,7 +70,7 @@
                       <td class="column-text padd-l-70">$ {{cartDetail.quantity * cartDetail.price | number}}
                       </td>
                       <td class="padd-l-80"><button type="button"
-                                  class="btn"
+                                  class="btn" style="margin-left: 20px"
                                   (click)="deleteProduct(cartDetail.id)">
                         <i class="fa fa-trash"></i>
                       </button></td>
@@ -79,15 +78,20 @@
                   </table>
                   <div class="row">
                     <div class="col-md-6">
-                      <h3 class="page-title" style="font-size: x-large">Total - $ {{total}}
-              
+                      <h3 class="page-title ml-40p" style="font-size: x-large">Total - $ {{total}}
+
                       </h3>
                     </div>
                     <div class="col-md-6 text-right">
                       <button type="button"
-                              class="removeall"
+                              class="removeall ml-40p mb-20px"
+                              (click)="openClientDetails()">
+                        Place order
+                      </button>
+                      <button type="button"
+                              class="removeall ml-30p"
                               (click)="removeAll()">
-                        <i class="fa fa-trash"></i>
+                        <i class="fa fa-trash" style="margin-left: 20px"></i>
                         Remove All Items</button>
                     </div>
                   </div>
@@ -96,4 +100,3 @@
           </ion-toolbar>
         </ion-header>
       </ion-content>
-              

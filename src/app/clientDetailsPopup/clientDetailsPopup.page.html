@@ -1,0 +1,38 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="headerContainer">Edit Details</ion-title>
+      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="textLabel">
+    <ion-item>
+      <ion-label position="fixed">First name:</ion-label>
+      <ion-input  #firstName></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Last name:</ion-label>
+      <ion-input #lastName></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Email</ion-label>
+      <ion-input #email></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Phone</ion-label>
+      <ion-input #phone></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Address</ion-label>
+      <ion-input #address></ion-input>
+    </ion-item>
+    <br>
+  </div>
+
+  <ion-button class="buttonContainerS mr-10" (click) = "placeOrder(firstName,lastName,email,phone,address)">Place order!</ion-button>
+
+
+</ion-content>

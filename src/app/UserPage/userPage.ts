@@ -3,11 +3,12 @@ import {User} from '../Models/User.interface';
 import {Organisation} from '../Models/Organisation.interface';
 import {Subscription} from 'rxjs';
 import {UserService} from '../services/userService';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ModalController} from '@ionic/angular';
 import {UserInformationPopupPage} from '../UserInformationPopup/userInformationPopup.page';
 import {UserEditInfoPopupPage} from '../UserEditInfoPopup/userEditInfoPopup.page';
 import {UserShowOrgPopupPage} from '../UserShowOrgPopup/userShowOrgPopup.page';
+import {UserOrderPopupPage} from '../userOrdersPopup/userOrderPopup.page';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -18,18 +19,9 @@ import {UserShowOrgPopupPage} from '../UserShowOrgPopup/userShowOrgPopup.page';
 
 export class UserPage implements  OnInit{
   user: User;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  InfopopupVisible = false;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  EditpopupVisible = false;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  ViewOrgVisible: boolean;
-  failViewOrgVisible: boolean;
   organisations: Organisation[];
-  getAllOrganisationsSubscription: Subscription;
-  idUser: string = this.route.snapshot.paramMap.get('id');
   subscriptionUserService: Subscription;
-  constructor(private userService: UserService , private route: ActivatedRoute, private modalController: ModalController) {}
+  constructor(private userService: UserService , private route: ActivatedRoute, private modalController: ModalController, private router: Router) {}
   ngOnInit(): void {
 
     this.subscriptionUserService = this.userService.user
@@ -51,6 +43,13 @@ export class UserPage implements  OnInit{
     });
     return await modal.present();
   }
+  async viewOrders(){
+    const modal = await  this.modalController.create({
+      component: UserOrderPopupPage,
+      componentProps: { user: this.user }
+    });
+    return await modal.present();
+  }
   async viewOrg(){
     const modal = await  this.modalController.create({
       component: UserShowOrgPopupPage,
@@ -58,7 +57,10 @@ export class UserPage implements  OnInit{
     });
     return await modal.present();
   }
-  onLogout():void {
+  onLogout(): void {
     this.userService.logout();
+  }
+  goToCart(){
+    this.router.navigate(['cart']);
   }
 }

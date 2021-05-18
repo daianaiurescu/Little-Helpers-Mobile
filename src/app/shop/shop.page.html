@@ -31,7 +31,7 @@
                         <ion-menu-button style="color:white"></ion-menu-button>
                     </ion-buttons>
                     <ion-title class="headerTitle">Little Helpers</ion-title>
-                    <div>  
+                    <div>
                       <div class="cart_value">
                       {{ cartNumber }}
                       </div>
@@ -45,14 +45,14 @@
                 <div class="products-container">
                   <div *ngFor="let product of products" class="product-container">
                     <img [src]=product.photo [width]="400">
-                      <div class="product-title"> {{ product.title}}</div>
+                      <div class="product-title ml-20p"> {{ product.title}}</div>
                       <p class="text"> {{ product.description }} </p>
                       <p class="text"> Category: {{ product.category }} </p>
                       <p class="text"> Sold by: {{ product.sold_by}} </p>
                       <p class="text"> {{ product.price }}$</p>
                     <div class="add-to-cart-section">
-                      <div class="quantity-section">
-                        <button type="button" class="btn mr-15" (click)="inc(product)">
+                      <div class="quantity-section ml-20p">
+                        <button type="button" class="btn ml-15" (click)="inc(product)">
                           <i class="fa fa-plus"></i>
                         </button>
                         <span class="quantity text ml-0">{{product.quantity}}</span>

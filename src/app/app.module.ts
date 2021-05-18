@@ -26,10 +26,13 @@ import {UserShowOrgPopupPage} from './UserShowOrgPopup/userShowOrgPopup.page';
 import {ViewProductsPopupPage} from './ViewProductsPopup/viewProductsPopup.page';
 import {ViewVolunteersPopupPage} from './ViewVolunteersPopup/viewVolunteersPopup.page';
 import {UserInformationPopupPage} from './UserInformationPopup/userInformationPopup.page';
-import {AuthInterceptorService} from "./services/authInterceptorService";
+import {AuthInterceptorService} from './services/authInterceptorService';
 
 import { ShopPage } from './shop/shop.page';
 import { CartPage } from './shop/cart.page';
+import {ClientDetailsPopupPage} from './clientDetailsPopup/clientDetailsPopup.page';
+import {UserOrderPopupPage} from "./userOrdersPopup/userOrderPopup.page";
+import {OrgOrderPopupPage} from "./orgOrderPopup/orgOrderPopup.page";
 
 @NgModule({
   declarations: [AppComponent,
@@ -51,7 +54,10 @@ import { CartPage } from './shop/cart.page';
     ViewProductsPopupPage,
     ViewVolunteersPopupPage,
     UserInformationPopupPage,
-    ShopPage,CartPage
+    ShopPage,CartPage,
+    ClientDetailsPopupPage,
+    UserOrderPopupPage,
+    OrgOrderPopupPage
   ],
   entryComponents: [],
   // eslint-disable-next-line max-len

@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class ShopPage implements OnInit {
 
   constructor(private userService: UserService,private router: Router,private productService: ProductService, private cartService: CartService) {
-    this.cartService.cartSubject.subscribe(data => typeof data === "number" ? this.cartNumber = data : data);
+    this.cartService.cartSubject.subscribe(data => typeof data === 'number' ? this.cartNumber = data : data);
 
   }
   getAllProductsSubscription: Subscription;
@@ -47,7 +47,7 @@ export class ShopPage implements OnInit {
       product.quantity -= 1;
     }
   }
-  addToCart(category): void{ 
+  addToCart(category): void{
     console.log('sss');
     const cartDataNull =
       localStorage.getItem('localCart');
@@ -88,7 +88,7 @@ export class ShopPage implements OnInit {
         (this.itemsCart));
       }
     }
-   
+
     this.cartNumberFunc();
   }
   cartNumberFunc(): void{
@@ -102,7 +102,7 @@ export class ShopPage implements OnInit {
   goToCart(): void{
     this.router.navigate(['cart']);
   }
- 
+
   cartNumberFunc2(): void {
     if
     (localStorage.getItem
@@ -111,5 +111,15 @@ export class ShopPage implements OnInit {
       this.cartNumber = cartCount.length;
     }
   }
-  
+
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  OpenPage(){
+
+    if (this.userService.user.getValue().role === 'user') {
+      this.router.navigate(['/userpage', this.userService.user.getValue().id]);
+    }
+    else{
+      this.router.navigate(['loggedOrganisation', this.userService.user.getValue().id]);
+    }
+  }
 }

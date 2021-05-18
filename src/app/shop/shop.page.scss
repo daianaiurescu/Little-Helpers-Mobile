@@ -25,7 +25,6 @@
   text-align: center;
   font-family: Cursive;
   font-size: 20px;
-  margin-top: 90px;
 }
 .page {
   flex: 1;
@@ -47,6 +46,7 @@
   margin-top: 30px;
   //padding: 20px;
   font-family: "Apple Chancery";
+  margin-left:0px;
 }
 .product-container {
   //padding: 28px;
@@ -64,6 +64,7 @@
 .text {
   font-family: Courier;
   color: darkcyan;
+  margin-top: 0px!important;
 }
 .product-info {
   flex: 0.8;
@@ -77,7 +78,6 @@
   margin-top: 25%;
 }
 .button {
-  margin-left: 20px;
   border-radius: 4px;
   background: darkcyan;
   border: 1px solid darkcyan;
@@ -104,7 +104,7 @@
 .quantity-section {
   margin-top: 60px;
   margin-bottom: 20px;
-  margin-left: 50px;
+  margin-left: 40%;
 }
 .quantity {
   color: darkcyan;

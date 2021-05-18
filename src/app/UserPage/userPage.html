@@ -14,7 +14,7 @@
       </ion-item>
       <ion-item>
         <ion-icon name="bag" slot="start"></ion-icon>
-        <ion-label>Shop</ion-label>
+        <ion-label [routerLink]="['/shop']">Shop</ion-label>
       </ion-item>
       <ion-item>
         <ion-icon name="accessibility" slot="start"></ion-icon>
@@ -32,7 +32,7 @@
       </ion-buttons>
       <ion-title class="headerTitle">Little Helpers</ion-title>
       <div>
-        <button class="styled-button"><i class="fa fa-shopping-cart"></i></button>
+        <button class="styled-button" (click)="goToCart()"><i class="fa fa-shopping-cart"></i></button>
       </div>
     </ion-toolbar>
 
@@ -44,6 +44,7 @@
           <ion-button (click)="showInfo()" slot="primary" class="buttonContainer mr-10">Details</ion-button>
           <ion-button (click)="editInfo()" slot="primary" class="buttonContainer mr-10">Edit your details</ion-button>
           <ion-button (click)="viewOrg()" slot="primary" class="buttonContainer mr-10">View your volunteering list</ion-button>
+          <ion-button (click)="viewOrders()" slot="primary" class="buttonContainer mr-10">View your orders</ion-button>
           <ion-button (click)="onLogout()" slot="primary" class="buttonContainer mr-10">Logout</ion-button>
         </div>
       </div>

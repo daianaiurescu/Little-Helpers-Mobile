@@ -25,6 +25,8 @@ export class WelcomePage implements OnInit{
       this.router.navigate(['loggedOrganisation', this.userService.user.getValue().id]);
     }
   }
-
+  goToCart(){
+    this.router.navigate(['cart']);
+  }
 }
 

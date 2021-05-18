@@ -11,6 +11,9 @@ import {EditOrgInfoPopupPage} from '../EditOrgInfoPopup/editOrgInfoPopup.page';
 import {ViewProductsPopupPage} from '../ViewProductsPopup/viewProductsPopup.page';
 import {AddProductsPopupPage} from '../AddProductsPopup/addProductsPopup.page';
 import {ViewVolunteersPopupPage} from '../ViewVolunteersPopup/viewVolunteersPopup.page';
+import {UserOrderPopupPage} from '../userOrdersPopup/userOrderPopup.page';
+import {OrgOrderPopupPage} from '../orgOrderPopup/orgOrderPopup.page';
+import {Router} from '@angular/router';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -27,7 +30,8 @@ export class LoggedOrgPage implements  OnInit{
   subscriptionUserService: Subscription;
   constructor(private userService: UserService,
               private organisationsService: OrganisationsService,
-              private modalController: ModalController
+              private modalController: ModalController,
+              private router: Router
   ) {
   }
 
@@ -79,5 +83,18 @@ export class LoggedOrgPage implements  OnInit{
       componentProps: { organisation: this.loggedOrganisation }
     });
     return await modal.present();
+  }
+  async viewOrders(){
+    const modal = await  this.modalController.create({
+      component: OrgOrderPopupPage,
+      componentProps: { organisation: this.loggedOrganisation }
+    });
+    return await modal.present();
+  }
+  onLogout(): void {
+    this.userService.logout();
+  }
+  goToCart(){
+    this.router.navigate(['cart']);
   }
 }

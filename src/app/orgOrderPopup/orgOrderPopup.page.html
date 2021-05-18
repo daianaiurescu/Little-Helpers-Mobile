@@ -1,0 +1,24 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-button (click)="CloseModal()" slot="primary" class="buttonContainer">Close</ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <div *ngFor="let order of orders" class="organisation-container">
+    <div *ngFor="let product of order.products">
+      <div *ngIf="product.sold_by === organisation.title">
+        <div class="organisation-info">
+          <div class="organisation-title large">Total : {{ order.total}} $</div>
+          <p class="large"> Ordered by: {{order.firstName}} {{order.lastName}}</p>
+          <p class="large"> Client contact info: {{order.phone}} , {{order.email}}</p>
+          <p class="large"> Shipment address: {{ order.address }} </p>
+          <p class="large"> Products:</p>
+          <p class="large">{{product.title}}</p>
+          <img [src]=product.photo [width]="200">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
