@@ -28,6 +28,8 @@ import {ViewVolunteersPopupPage} from './ViewVolunteersPopup/viewVolunteersPopup
 import {UserInformationPopupPage} from './UserInformationPopup/userInformationPopup.page';
 import {AuthInterceptorService} from "./services/authInterceptorService";
 
+import { ShopPage } from './shop/shop.page';
+import { CartPage } from './shop/cart.page';
 
 @NgModule({
   declarations: [AppComponent,
@@ -48,7 +50,8 @@ import {AuthInterceptorService} from "./services/authInterceptorService";
     UserShowOrgPopupPage,
     ViewProductsPopupPage,
     ViewVolunteersPopupPage,
-    UserInformationPopupPage
+    UserInformationPopupPage,
+    ShopPage,CartPage
   ],
   entryComponents: [],
   // eslint-disable-next-line max-len

@@ -1,0 +1,124 @@
+.new-background-color {
+  --background: darkcyan;
+}
+.headerTitle {
+  font-family: "Apple Chancery";
+  font-size: 28px;
+  color: white;
+  justify-content: center;
+}
+.styled-button {
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 75%;
+}
+.title {
+  text-align: center;
+  font-family: Cursive;
+  font-size: 40px;
+}
+.text {
+  text-align: center;
+  font-family: Cursive;
+  font-size: 20px;
+  margin-top: 90px;
+}
+.page {
+  flex: 1;
+  background: azure;
+  display: flow-root;
+  padding-right: 20px;
+}
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.buttonContainer {
+  --background: darkcyan;
+  height: 70px;
+  width: 100%;
+  font-size: x-large;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 30px;
+  //padding: 20px;
+  font-family: "Apple Chancery";
+}
+.product-container {
+  //padding: 28px;
+  margin: 20px;
+  margin-right: auto;
+  justify-content: center;
+}
+.product-title {
+  height: fit-content;
+  font-size: x-large;
+  font-family: "Apple Chancery";
+  color: darkcyan;
+  padding: 10px;
+}
+.text {
+  font-family: Courier;
+  color: darkcyan;
+}
+.product-info {
+  flex: 0.8;
+}
+.add-to-cart-section {
+  flex: 0.2;
+}
+.dx-field-value {
+  margin-right: 100px;
+  margin-bottom: 10%;
+  margin-top: 25%;
+}
+.button {
+  margin-left: 20px;
+  border-radius: 4px;
+  background: darkcyan;
+  border: 1px solid darkcyan;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 4px 16px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.button:hover {
+  color: darkcyan;
+  background: transparent;
+  border: 1px solid darkcyan;
+}
+.btn {
+  border-radius: 50%;
+  background: darkcyan;
+  color: white;
+  height: 15%;
+  font-size: 20px;
+}
+.quantity-section {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+.quantity {
+  color: darkcyan;
+  font-family: Courier;
+  font-size: 20px;
+}
+.cart_value {
+  position: absolute;
+  color: darkcyan;
+  background: white;
+  height: 20px;
+  border-radius: 50%;
+  top: 5%;
+  right: 10.5%;
+  font-size: 20px;
+  padding: 0 8px;
+}

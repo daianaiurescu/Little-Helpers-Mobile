@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <ion-menu side="start" content-id="main-content">
+            <ion-header>
+            <ion-toolbar translucent>
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+            </ion-header>
+            <ion-content>
+            <ion-list>
+                <ion-item>
+                <ion-icon name="home" slot="start"></ion-icon>
+                <ion-label routerLink="/welcome">Home</ion-label>
+                </ion-item>
+                <ion-item>
+                <ion-icon name="bag" slot="start"></ion-icon>
+                <ion-label>Shop</ion-label>
+                </ion-item>
+                <ion-item>
+                <ion-icon name="accessibility" slot="start"></ion-icon>
+                <ion-label routerLink="/organizations">Organisations</ion-label>
+                </ion-item>
+            </ion-list>
+            </ion-content>
+        </ion-menu>
+
+    <ion-content>
+        <ion-header id="main-content">
+                <ion-toolbar position="top" class="new-background-color">
+                    <ion-buttons slot="start">
+                        <ion-menu-button style="color:white"></ion-menu-button>
+                    </ion-buttons>
+                    <ion-title class="headerTitle">Little Helpers</ion-title>
+                    <div>  
+                      <div class="cart_value">
+                      {{ cartNumber }}
+                      </div>
+                        <button class="styled-button"><i (click)="goToCart()" class="fa fa-shopping-cart"></i></button>
+                        <button class="styled-button" (click)="OpenPage()" ><i class="fa fa-user"></i></button>
+                    </div>
+                </ion-toolbar>
+
+            <ion-toolbar>
+              <div class="page">
+                <div class="products-container">
+                  <div *ngFor="let product of products" class="product-container">
+                    <img [src]=product.photo [width]="400">
+                      <div class="product-title"> {{ product.title}}</div>
+                      <p class="text"> {{ product.description }} </p>
+                      <p class="text"> Category: {{ product.category }} </p>
+                      <p class="text"> Sold by: {{ product.sold_by}} </p>
+                      <p class="text"> {{ product.price }}$</p>
+                    <div class="add-to-cart-section">
+                      <div class="quantity-section">
+                        <button type="button" class="btn mr-15" (click)="inc(product)">
+                          <i class="fa fa-plus"></i>
+                        </button>
+                        <span class="quantity text ml-0">{{product.quantity}}</span>
+                        <button type="button" class="btn ml-15" (click)="dec(product)">
+                          <i class="fa fa-minus"></i>
+                        </button>
+                      </div>
+                      <ion-button stylingMode="contained" class="buttonContainer" (click)="addToCart(product)">Add to cart!</ion-button>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </ion-toolbar>
+        </ion-header>
+    </ion-content>
